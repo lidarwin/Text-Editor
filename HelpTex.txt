@@ -1,0 +1,88 @@
+\textheight{200}
+\parindent{0}
+How to play:
+
+The game board consists of (initially) a 6 X 6 board of squares. At any time, each
+square may have one of three colors: red, blue, or white (neutral), and some number of
+spots (as on dice). Initially, all squares are white and have no spots.
+
+For purposes of naming squares, we'll use the following notation:
+r:c
+refers to the square at row r and column c, where 1 < = r, c ≤ N. 
+
+Rows are numbered from top to bottom (top row is row 1) and columns are numbered from the left.
+The neighbors of a square are the horizontally and vertically adjacent squares (diagonally
+adjacent squares are not neighbors). We say that a square is overfull if it contains more spots
+than it has neighbors. Thus, the four corner squares are over full when they have more than
+two spots; other squares on the edge are overfull with more than three spots; and all others
+are overfull with more than four spots. There are two players, whom we'll call Red and Blue. 
+The players each move in turn, with Red going first. A move consists of adding one spot on any square 
+that does not have the opponent's color (so Red may add a spot to either a red or white square). A spot placed
+on a white square colors that square with the player's color. After the player has moved, we repeat the 
+following process until no square is overfull or all squares are the same color:
+
+1. Pick an overfull square.
+
+2. For each neighbor of the overfull square, move one spot out
+of the square and into the
+neighbor.
+
+3. Give each of these neighboring squares the player's color
+(if they don't have it already).
+
+Commands:
+
+--clear--
+
+Abandons the current game (if one is in progress), and clears
+the board to its initial configuration (all squares neutral). Playing stops until the next start command.
+
+--start--
+
+Start playing from the current position, if not doing so already (has no effect if currently playing). 
+Takes moves alternately from Red and Blue according to their color and the current move number.
+
+--auto COLOR--
+
+Stops the current game until the next start command and causes player of COLOR to be
+played by an automated player (an AI) on subsequent moves. The value COLOR must be “red”
+or “blue” (ignore case—“Red” or “RED” also work). Initially, Blue is an automated player.
+
+--manual COLOR--
+
+Stops the current game until the next start command and causes player of COLOR to be
+played by a human on subsequent moves. The value COLOR must be “red”
+or “blue” (ignore case—“Red” or “RED” also work). Initially, Blue is an automated player.
+
+--size N--
+
+Stops any current game, clears the board to its initial configuration, and sets the size of the board to N
+squares. Initially, N = 6. N must be of the form [0-9]
+
+--move N--
+
+Stop any current game, set the number of the next move N. You usually use this
+command after setting up an initial position (with set commands.) Initially, the number
+of the next move is 1.
+
+--set R C N P--
+
+Stop any current game. Put N spots at row R and column C P
+is either 'b' or 'r' (for blue or red,) indicating the color of the square. When N is 0, P is ignored and the square is cleared.
+
+--dump--
+
+It prints the board out in exactly the following format:
+
+\nofill
+2r -- 2r 2r -- 2b
+-- -- 2r -- 3r --
+2r 3r 2r 3r -- 2b
+3r 1r 3r 2r 2r 2b
+2b 4r 3r 1r 3r 2b
+2b 2b 3b 2r 3b 1b
+
+\fill
+
+markers at the left margin and other lines indented four spa
+ces. Here, '--' indicates a neutral square, 'N r' indicates a red square with N spots, and 'N b' indicates a blue square with N spots.

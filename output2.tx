@@ -1,0 +1,17 @@
+   The following  quotation about writing  test programs for  a document
+compiler from an article by Donald  Knuth conveys someof the right frame
+   of
+    of  mind:"... I  generallyget  best results  by  writing a  test
+    program that  no sane  user would  ever thinkof  writing.... The
+    resulting test  program is  so crazy that  I could  not possibly
+    explain to anybody else what it is supposed to
+explain to  anybody else what it  is supposed to do...."You  should also
+read Column  3 of _MoreProgramming  Pearls_ for more  advice.Among other
+things, this column discusses
+    things, this column discusses scaffolding.The standard C header file
+assert.h  provides a  macro"assert". When  this  file is  included in  a
+source file,  and thefile is  compiled withoutthe option  -DNDEBUG, each
+call assert(C),  where C  isany boolean  expression, will  terminate the
+program with an errormessage if C turns out to be false at that
+[1] (D. E. Knuth,``The Errors of TEX'',Software Practice& Experience, 19
+    (7) (July, 1989), pp.  625-626).J. Bentley, More Programming Pearls:

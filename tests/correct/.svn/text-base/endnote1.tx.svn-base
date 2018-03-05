@@ -1,0 +1,5 @@
+\parindent{0}
+This is a simple file\endnote{Which is not to say trivial.} that has a couple
+of endnotes\endnote{Which should appear after the "Notes" entry.}.
+
+Notes:

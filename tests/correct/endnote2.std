@@ -1,0 +1,14 @@
+   Here, we make sure that we can change formatting in endnotes[1]. This
+line and the remainder should remain at the default width.
+
+   That goes  also for the next  paragraph, which should continue  to be
+set at the default width.
+
+References.
+[1] These   lines
+    should  be  only
+    20   characters
+    wide,   without
+    changing   the
+    formatting   of
+    regular text.

@@ -1,0 +1,3 @@
+   Check that special  backslashed characters  work properly:  "{", "}",
+"\", and   blank. There should be one space between "that" and "special"
+and several between "and" and "blank". 

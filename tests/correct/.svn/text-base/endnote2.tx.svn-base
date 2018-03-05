@@ -1,0 +1,8 @@
+Here, we make sure that we can change formatting in endnotes\endnote{\textwidth{20}These lines should be only 20 characters wide, without changing the formatting
+of regular text.}.  This line and the remainder should remain at the default
+width.
+
+That goes also for the next paragraph, which should continue to be set at the default width.
+
+\parindent{0}
+References.
